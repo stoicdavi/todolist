@@ -75,7 +75,7 @@ class _TasksScreenState extends State<TasksScreen> {
           children: const [
             UserAccountsDrawerHeader(
               currentAccountPicture: const CircleAvatar(
-                backgroundImage: AssetImage("plp.jpeg"),
+                backgroundImage: AssetImage("deantech.png"),
               ),
               accountName: Text("Kamash"),
               accountEmail: Text("kamash@gmail.com"),
