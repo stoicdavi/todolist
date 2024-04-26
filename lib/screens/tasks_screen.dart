@@ -51,7 +51,7 @@ class _TasksScreenState extends State<TasksScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Row(
+          title:const Row(
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 35.0),
@@ -67,38 +67,38 @@ class _TasksScreenState extends State<TasksScreen> {
               ), // Title text
             ],
           ),
-          backgroundColor: Color.fromARGB(255, 136, 48, 7),
-          iconTheme: IconThemeData(color: Colors.white)),
-      drawer: Drawer(
+          backgroundColor: const Color.fromARGB(255, 136, 48, 7),
+          iconTheme: const IconThemeData(color: Colors.white)),
+      drawer:const Drawer(
         elevation: 0,
         child: Column(
-          children: const [
+          children:[
             UserAccountsDrawerHeader(
-              currentAccountPicture: const CircleAvatar(
+              currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage("deantech.png"),
               ),
-              accountName: Text("Kamash"),
-              accountEmail: Text("kamash@gmail.com"),
+              accountName: Text("David"),
+              accountEmail: Text("nanjiladavid2@gmail.com"),
             ),
-            const ListTile(
+            ListTile(
               title: Text("Dashboard"),
               leading: Icon(Icons.menu_outlined),
             ),
-            const ListTile(
+            ListTile(
               title: Text("Pending Task"),
               leading: Icon(Icons.incomplete_circle),
             ),
-            const ListTile(
+            ListTile(
               title: Text("Completed Task"),
               leading: Icon(Icons.check_box),
             ),
-            const ListTile(
+            ListTile(
               title: Text("Help"),
               leading: Icon(Icons.help_center),
             ),
             ListTile(
-              title: const Text("Logout"),
-              leading: const Icon(Icons.logout),
+              title: Text("Logout"),
+              leading: Icon(Icons.logout),
             ),
           ],
         ),
@@ -115,11 +115,11 @@ class _TasksScreenState extends State<TasksScreen> {
                     borderRadius: BorderRadius.circular(20)),
                 child: TextField(
                   onChanged: (value) => _runFilter(value),
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       contentPadding: EdgeInsets.all(0),
                       prefixIcon: Icon(
                         Icons.search,
-                        color: const Color.fromARGB(255, 39, 38, 38),
+                        color:Color.fromARGB(255, 39, 38, 38),
                         size: 20,
                       ),
                       prefixIconConstraints:
@@ -129,15 +129,15 @@ class _TasksScreenState extends State<TasksScreen> {
                       hintStyle: TextStyle(color: Colors.grey)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Expanded(
                   child: ListView(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 30, bottom: 20),
-                    child: Text(
+                    margin:const EdgeInsets.only(top: 30, bottom: 20),
+                    child: const Text(
                       "All ToDos",
                       style:
                           TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
@@ -155,7 +155,7 @@ class _TasksScreenState extends State<TasksScreen> {
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 206, 202, 183),
+      backgroundColor: const Color.fromARGB(255, 206, 202, 183),
     );
   }
 }
